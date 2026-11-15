@@ -1,0 +1,30 @@
+; Engine configuration file.
+; ELYNDRA - Secrets of the Seven Realms
+; Pinned engine: Godot 4.4.1-stable
+; Primary target: Android (Mobile renderer)
+;
+; This file is tracked in Git. It contains no secrets.
+
+config_version=5
+
+[application]
+
+config/name="ELYNDRA - Secrets of the Seven Realms"
+config/description="Milestone 001 foundation: a flat 1500 x 1500 meter world with a 15 x 15 logical region grid."
+run/main_scene="res://scenes/main/main.tscn"
+config/features=PackedStringArray("4.4", "Mobile")
+config/version="0.1.0"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/handheld/orientation="landscape"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+environment/defaults/default_clear_color=Color(0.22, 0.32, 0.45, 1)
+anti_aliasing/quality/use_taa=false
+anti_aliasing/quality/use_debanding=false
