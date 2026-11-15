@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# ELYNDRA - Godot 4 .gitignore
+# ---------------------------------------------------------------------------
+# Godot 4 generates a per-project cache/import directory. It is machine
+# specific and must never be committed.
+.godot/
+
+# Godot 4 exported localisation files.
+*.translation
+
+# Godot editor temporary/backup files.
+*.tmp
+*~
+*.swp
+
+# Exported build artifacts (never commit binaries).
+/build/
+/dist/
+*.apk
+*.aab
+*.tpz
+*.pck
+*.zip
+*.exe
+*.dmg
+
+# Exported preset credentials. Godot stores Android keystore credentials here.
+# Never commit this file.
+export_credentials.cfg
+
+# Signing keystores and keys. Never commit these.
+*.keystore
+*.jks
+*.p12
+*.key
+keystore.properties
+
+# Keep a tracked example so the intended format is obvious.
+!keystore.example
+
+# Local editor overrides (Godot 4.4+).
+*.godot/editor/
+.godot/editor/
+
+# OS noise.
+.DS_Store
+Thumbs.db
+
+# NOTE: export_presets.cfg is intentionally NOT ignored. It contains the
+# export preset definitions and no secrets by default. Review it before
+# committing; if a secret is ever added there, remove it and use
+# export_credentials.cfg or a local untracked override instead.
