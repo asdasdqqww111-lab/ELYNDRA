@@ -83,14 +83,18 @@ ELYNDRA/
 └── docs/            # project documentation
 ```
 
+The tree above is the **planned** structure. In M001 only the folders that hold
+real files exist: `scenes/`, `scripts/`, `tests/`, `docs/` and `assets/`
+(`assets/README.md` only).
+
 ### Deviations from the proposed M001 structure
 
 - `assets/` sub-folders are not created as empty directories. Git cannot track
   empty folders and M001 has no assets; `assets/README.md` documents the planned
   layout. Folders will be created when the first real asset lands.
-- `resources/` is present for future `.tres` resources; M001 uses scene-embedded
-  sub-resources only, so it contains no files yet.
-- `addons/` is empty and will remain empty until an add-on is verified.
+- `resources/` is not created yet; M001 uses scene-embedded sub-resources only.
+  It will be created when the first `.tres`/`.res` resource is added.
+- `addons/` is not created yet and will remain empty until an add-on is verified.
 
 ## 4. Scene architecture
 
