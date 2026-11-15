@@ -247,8 +247,19 @@ compileSdk/targetSdk 36, build-tools 36.1.0, minSdk 24 (Vulkan), JDK 17.
 |---|---|
 | Branch | `arena/2b36389d-elyndra` (see decision D-009) |
 | Base | `main` @ `c173e8a` |
+| Pull request | [#1 — Milestone 001 — Project Foundation & First Runnable World](https://github.com/asdasdqqww111-lab/ELYNDRA/pull/1) (OPEN, not merged) |
 | Working tree | Clean after commits |
-| Secrets committed | None |
+| Secrets committed | None (verified by scanning the PR diff for keystore/password/token patterns) |
+
+Commits:
+
+```
+f3bff18 docs: document architecture, world, art, performance and build status
+a7849c0 test: add headless validation suite
+38c843e feat: add flat world foundation
+6905334 feat: add world region coordinate utility
+512c95d chore: configure Godot 4.4.1 project structure
+```
 
 ---
 
