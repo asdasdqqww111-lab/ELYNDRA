@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/main/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/world/world_ground.tscn" id="2_ground"]
+[ext_resource type="PackedScene" path="res://scenes/debug/debug_hud.tscn" id="3_hud"]
+
+[sub_resource type="Environment" id="Environment_main"]
+background_mode = 1
+background_color = Color(0.22, 0.32, 0.45, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.55, 0.62, 0.72, 1)
+ambient_light_energy = 0.7
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="Ground" parent="World" instance=ExtResource("2_ground")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_main")
+
+[node name="Sun" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0)
+light_energy = 1.0
+shadow_enabled = false
+
+[node name="DebugCamera" type="Camera3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 1700, 1700)
+fov = 60.0
+near = 0.5
+far = 4000.0
+
+[node name="DebugHUD" parent="." instance=ExtResource("3_hud")]
